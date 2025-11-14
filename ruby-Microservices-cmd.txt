@@ -1,0 +1,49 @@
+GITHUB LINK
+https://github.com/JHeroGR/ruby-sinatra-starter-app.git 
+
+ON WINDOWS (place app in C:\ruby_lab15)
+
+1. Install Ruby (RubyInstaller + Devkit) from https://rubyinstaller.org (choose Ruby+Devkit 3.4.x (x64)) — run installer and choose ridk install → option 3.
+2. Open PowerShell (normal user)
+3. cd C:\
+4. mkdir ruby_lab15
+5. cd ruby_lab15
+6. git clone https://github.com/JHeroGR/ruby-sinatra-starter-app.git .
+7. gem install bundler
+8. bundle install
+9. Run the app (bind to all interfaces):
+10. ruby app.rb -o 0.0.0.0 -p 4567
+11. Stop the project: Ctrl + C in the terminal
+
+Test in browser (Windows): http://127.0.0.1:4567/ (or http://127.0.0.1:9292/ if you used rackup)
+
+ON UBUNTU (VM) — prepare for FileZilla upload
+
+1. sudo apt update
+2. sudo apt install openssh-server -y
+3. sudo systemctl start ssh
+4. sudo systemctl enable ssh
+5. ip a (note VM IP, e.g. 192.168.1.120)
+6. FileZilla process (connect from Windows to VM via SFTP): Host sftp://<VM_IP>, Port 22, Username: imcc, Password: imcc@123
+7. Upload the Project Folder from Windows C:\ruby_lab15 to Linux /home/student/ruby_lab15/
+
+ON UBUNTU — run the app in /home/student/ruby_lab15
+8. cd /home/student/ruby_lab15
+9. sudo chown -R $(whoami):$(whoami) /home/student/ruby_lab15
+10. sudo apt update
+11 sudo apt install -y ruby-full build-essential
+12. gem install bundler
+13. bundle install --path vendor/bundle
+14. Run the app bound to all interfaces:
+15.ruby app.rb -o 0.0.0.0 -p 4567
+
+(Optional) test locally on VM: curl http://127.0.0.1:4567/
+
+1. Keep the terminal open to keep server running
+
+ACCESS UBUNTU SERVER FROM WINDOWS (HOSTS FILE METHOD)
+1. Open C:\Windows\System32\drivers\etc\hosts in Notepad as Administrator
+2. Add a line:
+   <ubuntu-ip> sinatra-lab.local
+   (replace <ubuntu-ip> with the IP noted from ip a, e.g. 192.168.1.120)
+3. In Windows browser visit: http://sinatra-lab.local:4567 (or http://<ubuntu-ip>:4567)

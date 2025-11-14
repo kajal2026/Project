@@ -1,0 +1,30 @@
+GITHUB LINK:
+https://github.com/PyByAnshul/simple-todo
+
+ON WINDOWS:
+1. python -m venv venv
+2. venv\Scripts\activate
+3. pip install --upgrade pip
+4. pip install -r requirements.txt
+5. python app.py
+6. Open browser: http://127.0.0.1:5000/
+7. Stop server with Ctrl+C
+
+ON Ubuntu:
+1. sudo apt update
+2. sudo apt install openssh-server -y
+3. sudo systemctl enable --now ssh
+4. ip a
+5. Filezilla process
+6. go to project folder and open it in terminal or cd Linux/home/student/python_lab13/simple-todo if you uploaded there
+7. python3 -m venv venv
+8. source venv/bin/activate
+9. python3 -m pip install --upgrade pip
+10.pip install -r requirements.txt 
+# No migrations needed — repo contains todo.sqlite
+11. python3 app.py
+
+Access Ubuntu app from Windows (hosts file method)
+1. C:\Windows\System32\drivers\etc\hosts
+2. at bottom of the file add line:      192.168.1.120    simpletodo.local
+3. on browser: http://simpletodo.local:5000

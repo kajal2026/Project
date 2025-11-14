@@ -1,0 +1,65 @@
+GITHUB ZIP LINK
+https://github.com/ASoares/PHP-Form-Validation
+
+1. Download ZIP file
+2. Extract ZIP
+3. Move extracted folder to:
+   C:\php_lab15
+4. Open CMD:
+5. cd C:\php_lab15
+6. Start PHP built-in server:
+   ```
+   php -S 127.0.0.1:8000
+   ```
+7. Open browser:
+   [http://127.0.0.1:8000/index.php](http://127.0.0.1:8000/index.php)
+8. Test form validation
+9. Take screenshots
+-----------------------------------------
+
+# PREPARE UBUNTU VM FOR FILEZILLA
+-----------------------------------------
+1. sudo apt update
+2. sudo apt install openssh-server -y
+3. sudo systemctl start ssh
+4. sudo systemctl enable ssh
+5. ip a     (note VM IP)
+6. Open FileZilla on Windows
+   * Host: sftp://<VM_IP>
+   * Username: student
+   * Password: your-password
+   * Port: 22
+7. Upload folder to:
+   /home/student/php_lab15/
+ -----------------------------------------
+
+ UBUNTU VM – RUN USING PHP BUILT-IN SERVER
+ -----------------------------------------
+
+1. sudo apt update
+2. sudo apt install php -y
+3. cd /home/student/php_lab15
+4. Start server:
+   ```
+   php -S 0.0.0.0:8000
+   ```
+5. Test on VM browser (optional):
+   [http://127.0.0.1:8000/index.php](http://127.0.0.1:8000/index.php)
+ -----------------------------------------
+
+ ACCESS UBUNTU SERVER FROM WINDOWS
+
+ -----------------------------------------
+
+1. Open hosts file in Notepad (Run as Admin):
+   C:\Windows\System32\drivers\etc\hosts
+2. Add line:
+   <VM_IP>    phpform.local
+3. Save file
+4. Open Windows browser:
+   [http://phpform.local:8000/index.php](http://phpform.local:8000/index.php)
+ -----------------------------------------
+
+ END
+
+ -----------------------------------------

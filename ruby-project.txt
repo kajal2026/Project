@@ -1,0 +1,87 @@
+Question 4 (Ruby Application)
+https://github.com/saadactin/ruby_portfolio (only on windows)
+
+-----------------------------------------
+RUBY PORTFOLIO PROJECT – WINDOWS STEPS
+-----------------------------------------
+
+1. Install Ruby+Devkit 3.4.x (x64)
+2. Install Node.js LTS
+3. npm install -g yarn
+4. Open PowerShell:
+5. cd C:\
+6. mkdir ruby_lab15
+7. cd ruby_lab15
+8. git clone https://github.com/saadactin/ruby_portfolio.git
+9. gem install bundler
+10. bundle install
+11. yarn install
+12. bundle exec rails db:create
+13. bundle exec rails db:migrate
+14. bundle exec rails db:seed (if seeds exist) or: bundle exec rails db:setup
+15. bundle exec rails server -b 0.0.0.0 -p 3000
+16. Stop server (Ctrl + C)
+
+Test in browser: http://127.0.0.1:3000/
+
+-----------------------------------------
+UBUNTU VM – PREP FOR FILEZILLA
+-----------------------------------------
+
+1. sudo apt update
+2. sudo apt install openssh-server -y
+3. sudo systemctl start ssh
+4. sudo systemctl enable ssh
+5. ip a (note VM IP)
+6. Use FileZilla (on Windows):
+
+-----------------------------------------
+UBUNTU VM – RUN PROJECT
+-----------------------------------------
+
+cd /home/student/ruby_lab15
+
+sudo chown -R $(whoami):$(whoami) /home/student/ruby_lab15
+
+sudo apt update
+
+sudo apt install -y ruby-full build-essential libsqlite3-dev sqlite3 nodejs npm
+
+sudo npm install -g yarn
+
+gem install bundler
+
+bundle install
+
+yarn install
+
+bundle exec rails db:create
+
+bundle exec rails db:migrate
+
+bundle exec rails db:seed (if seeds exist)
+
+or: bundle exec rails db:setup
+
+bundle exec rails server -b 0.0.0.0 -p 3000
+
+Test on VM: curl http://127.0.0.1:3000/
+
+-----------------------------------------
+ACCESS UBUNTU SERVER FROM WINDOWS
+-----------------------------------------
+
+Open: C:\Windows\System32\drivers\etc\hosts
+
+Add line:
+<VM_IP> rubyportfolio.local
+
+In Windows browser open:
+http://rubyportfolio.local:3000
+
+or
+http://<VM_IP>:3000
+
+-----------------------------------------
+END
+-----------------------------------------
