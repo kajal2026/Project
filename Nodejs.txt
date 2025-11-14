@@ -1,0 +1,33 @@
+Node.js 
+
+project_name: https://github.com/mrjng/simple-nodejs-web-app.git
+
+Windows:
+
+To run: node app.js or node start
+
+Ubuntu:
+
+1. sudo apt update
+
+2. sudo apt install nodejs npm -y
+
+3. Check version: node -v, npm -v
+
+4. Firezilla: Enter ip: e.g sftp://192.168.56.101
+
+5. Upload your full project folder: e.g /home/imcc/node-app/
+
+6. Go into project folder: ls
+
+7. cd ~/node-app/simple-nodejs-web-app-main/src
+
+8. Install- npm install
+
+9. cd src
+
+10. node app.js
+
+11. http://<VM_IP>:8080
+
+
