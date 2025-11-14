@@ -1,0 +1,37 @@
+GITHUB LINK
+https://github.com/punitzen/Note-keeping-app-django?tab=readme-ov-file
+
+ON WINDOWS:
+1. python -m venv venv
+2. venv\Scripts\activate
+3. pip install --upgrade pip
+4. pip install -r requirements.txt 
+5. pip install Pillow
+6. python manage.py migrate
+7. python manage.py createsuperuser  \\usename: admin   email:admin@gmail.com  password:admin
+8. python manage.py runserver
+9. stop the project
+10. http://127.0.0.1:8000/admin  -- for admin access
+
+
+ON UBUNTU:
+1. sudo apt update
+2. sudo apt install openssh-server -y
+3. sudo systemctl start ssh
+4. sudo systemctl enable ssh
+5. ip a
+6. Filezilla process
+7. Upload the Project Folder: /home/student/python_lab18/ in Linux.
+8. Go to Project Folder and open prject in terminal
+9. python3 -m venv venv
+10. source venv/bin/activate
+11. pip install --upgrade pip
+12. pip install -r requirements.txt
+13. python3 manage.py migrate
+14. python3 manage.py createsuperuser
+15. python3 manage.py runserver 0.0.0.0:8000
+
+ACCESS UBUNTU SERVER FROM WINDOWS (HOSTS FILE METHOD)
+1. C:\Windows\System32\drivers\etc\hosts
+2. <ubuntu ip>    notekeeping.local
+3. http://notekeeping.local:8000  //On browser
